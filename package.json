@@ -4,6 +4,7 @@
   "description": "React VideoCall App",
   "scripts": {
     "build": "cd client && webpack --config webpack-prod.config.js",
+    "build-all": "cd client && webpack --config webpack-prod.config.js && cd ../dashboard && npx vite build --base /dashboard --outDir ../client/dashboard/ && cp public/* ../client/dist/",
     "start": "node server/index.js",
     "watch:client": "webpack serve --config client/webpack-dev.config.js",
     "watch:server": "nodemon server/index.js",

@@ -7,6 +7,7 @@ const app = express();
 const server = http.createServer(app);
 
 app.use('/', express.static(`${__dirname}/../client/dist`));
+app.use('/dashboard', express.static(`${__dirname}/../client/dashboard`));
 
 server.listen(config.PORT, () => {
   socket(server);

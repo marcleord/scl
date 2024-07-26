@@ -1,4 +1,5 @@
 client/dist/
+client/dashboard/
 # client/index.html
 node_modules
 dist
