@@ -67,7 +67,7 @@ function App(): ReactNode {
                                 },
                                 {
                                     name: "Call",
-                                    list: "/dashboard/appels",
+                                    list: "/dashboard",
                                     meta: {
                                         canDelete: false,
                                         label: "Mes appels"
@@ -105,9 +105,9 @@ function App(): ReactNode {
                                 }
                             >
                                 <Route index element={
-                                        <NavigateToResource resource="blog_posts" />
+                                        <NavigateToResource resource="calls" />
                                 } />
-                                <Route path="/dashboard/appels">
+                                <Route path="/dashboard">
                                     <Route index element={<CallList />} />
                                 </Route>
                                 <Route path="*" element={<ErrorComponent />} />
